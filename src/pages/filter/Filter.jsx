@@ -43,7 +43,7 @@ function Filter() {
       <div className="">
         <h1 className="text-center font-bold">LIGHT SOCKET</h1>
         <div className="flex justify-center gap-2 text-slate-800 font-medium p-3">
-          <span className="dark:text-slate-300">OFF</span>
+          <span className="dark:text-slate-300">LIGHT ON</span>
 
           <input
             type="checkbox"
@@ -69,7 +69,7 @@ function Filter() {
             </div>
           </label>
 
-          <span className="dark:text-slate-300">ON</span>
+          <span className="dark:text-slate-300">LIGHT OFF </span>
         </div>
       </div>
 
@@ -100,9 +100,9 @@ function Filter() {
             <option value="Indian" className="dark:bg-slate-800 border-0">Indian</option>
           </select>
         </div>
-
+  
         <div className="mt-7">
-          <ul className="flex flex-wrap gap-3 justify-center items-center">
+          <ul className="flex flex-wrap gap-3 justify-center items-center sm:container">
             {filteredItems.map((item) => (
               <button type="button" onClick={() => changeContent(item)}>
                 <li key={item.id} className="border-2 shadow-xl p-3 h-max w-44 rounded-md dark:shadow-slate-950 dark:border text-left dark:border-slate-300">
@@ -124,8 +124,8 @@ function Filter() {
             <>
               {popoopContent.map((pop) => {
                 return (
-                  <div className="flex justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-20">
-                    <div className="border-2 shadow-xl p-3 bg-white w-3/4 h-max relative dark:bg-slate-800 rounded-md dark:border dark:shadow-2xl dark:shadow-slate-950">
+                  <div className="flex justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-50 ">
+                    <div className="border-2 shadow-xl p-3 bg-white w-3/4 h-max relative dark:bg-slate-800 rounded-md dark:border dark:shadow-2xl dark:shadow-slate-950 sm:w-96 flex flex-col items-center sm:p-5">
                       <button
                         className="py-1 px-2.5 text-sm rounded-full bg-red-600 absolute top-0 right-0 text-white font-black text-center m-auto border flex justify-center items-center border-white dark:border-slate-800 dark:text-slate-100"
                         onClick={changeContent}
@@ -134,11 +134,11 @@ function Filter() {
                       </button>
                       <img src={pop.imageUrl} alt="food img" className="rounded-md"/>
                       <div className="">
-                        <h3 className="text-lg font-semibold mb-3">
+                        <h3 className="text-lg font-semibold my-3">
                           {pop.name}
                         </h3>
                         <p className="mb-2">{pop.desc}</p>
-                        <p className="first-letter:font-semibold first-letter:text-lg">
+                        <p className="first-letter:font-semibold first-letter:text-lg color">
                           {pop.recipe}
                         </p>
                       </div>
