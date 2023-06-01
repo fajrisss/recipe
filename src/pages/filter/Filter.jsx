@@ -152,6 +152,6 @@ function Filter() {
       </div>
     </div>
   );
-}
+} 
 
 export default Filter;
